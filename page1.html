@@ -41,25 +41,19 @@
             margin-bottom: 20px;
         }
 
-        /* Video Embed */
+        /* Video Wrapper */
         .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
+            width: 100%;
             max-width: 100%;
-            background: black;
             border-radius: 10px;
+            overflow: hidden;
             margin-bottom: 20px;
         }
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        /* Video Element */
+        video {
             width: 100%;
-            height: 100%;
-            border: none;
+            height: auto;
             border-radius: 10px;
         }
 
@@ -73,15 +67,19 @@
 <body>
 
     <div class="content-container">
-        <h1>PENGUN</h1>
+        <h1>Welcome to Pengun</h1>
 
-        <!-- Embedded YouTube Video (Autoplay & Muted to comply with browser rules) -->
+        <!-- Self-Hosted Video -->
         <div class="video-wrapper">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/2DlMd0N2kyY?si=mp5NADc22x5vFguJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <video controls autoplay muted>
+                <source src="static/Pengun Reveal Trailer.mp4" type="video/mp4">
+                <source src="static/video.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
         </div>
 
         <p class="description">
-            Pengun is a really cool game I made!
+            This is a description of the video content. Enjoy watching!
         </p>
     </div>
 
