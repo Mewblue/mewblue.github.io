@@ -3,10 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 4</title>
+    <title>Page 1 - Video Content</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-page background */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('static/background.jpg') repeat;
+            background-size: cover;
+            color: white;
+        }
+
+        /* Content Container */
+        .content-container {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Title Styling */
+        .content-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Video Embed */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: black;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* Description Text */
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Page 4</h1>
-    <a href="index.html">Go Back</a>
+
+    <div class="content-container">
+        <h1>Spellslingers</h1>
+
+        <!-- Embedded YouTube Video (Autoplay & Muted to comply with browser rules) -->
+        <div class="video-wrapper">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/MZ0Jt2nvye0?si=gFmZ6vsoHhNYjEp2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <p class="description">
+            This is my final year project at Staffordshire University. The project exists as a solution to a problem created by the meteoric rise of GPS-based games in the past decade - resources and gameplay in these games often end up tied to monuments and rely heavily on physical location. As a result, many players end up being excluded due to where they live or get encouraged to drive to the ideal location. This project looks back at pedometer-based games which are more accessible and aims to remain lightweight on performance to allow for many users.
+
+
+
+
+        </p>
+    </div>
+
 </body>
 </html>
