@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-screen background with smooth diagonal scrolling */
+        body {
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background layer with continuous diagonal movement */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: url('static/background.png') repeat; /* Replace with your background */
+            background-size: cover;
+            animation: diagonalScroll 60s linear infinite;
+        }
+
+        @keyframes diagonalScroll {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(-200px, -200px); /* Moves smoothly */
+            }
+        }
+
+		/* Container for Text & Buttons */
+		.container {
+			position: absolute;
+			top: 45%; /* Moves the whole container slightly higher */
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: rgba(0, 0, 0, 0.7);
+			padding: 40px 30px 50px; /* Added extra bottom padding */
+			border-radius: 20px;
+			text-align: center;
+			width: 80%;
+			max-width: 600px;
+			color: white;
+			box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+		}
+
+		/* Move the heading & description up */
+		.container h1 {
+			font-size: 2rem;
+			margin-bottom: 15px;
+		}
+
+		.container p {
+			margin-bottom: 25px; /* Creates more space between text and buttons */
+		}
+
+		/* Button Grid */
+		.button-container {
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+			padding-top: 10px; /* Adds space above the buttons */
+		}
+
+
+        /* Animated Buttons */
+        .button {
+            width: 120px;
+            height: 120px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            transform: scale(1.2);
+        }
+
+        /* Default Backgrounds */
+        .button1 { background-image: url('static/placeholder1.jpg'); }
+        .button2 { background-image: url('static/placeholder2.jpg'); }
+        .button3 { background-image: url('static/placeholder3.jpg'); }
+        .button4 { background-image: url('static/placeholder4.jpg'); }
+
+        /* Change to GIF on Hover */
+        .button1:hover { background-image: url('static/animated1.gif'); }
+        .button2:hover { background-image: url('static/animated2.gif'); }
+        .button3:hover { background-image: url('static/animated3.gif'); }
+        .button4:hover { background-image: url('static/animated4.gif'); }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Richard John Stevens Portfolio</h1>
+        <p>Explore my projects by clicking on the buttons below!</p>
+        <div class="button-container">
+            <a href="page1.html" class="button button1"></a>
+            <a href="page2.html" class="button button2"></a>
+            <a href="page3.html" class="button button3"></a>
+            <a href="page4.html" class="button button4"></a>
+        </div>
+    </div>
+
+</body>
+</html>
