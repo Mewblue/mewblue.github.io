@@ -17,11 +17,38 @@
         body {
             height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             background: url('static/background.jpg') repeat;
             background-size: cover;
             color: white;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
 
         /* Content Container */
@@ -33,6 +60,7 @@
             width: 80%;
             max-width: 700px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            margin-top: 80px; /* Prevents overlap with navbar */
         }
 
         /* Title Styling */
@@ -68,22 +96,52 @@
             font-size: 1.1rem;
             line-height: 1.6;
         }
+
+        /* Responsive Navigation */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            .navbar a {
+                padding: 8px 15px;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+        <a href="page4.html">Page 4</a>
+    </nav>
+
     <div class="content-container">
         <h1>PENGUN</h1>
 
-        <!-- Embedded YouTube Video (Autoplay & Muted to comply with browser rules) -->
+        <!-- Embedded YouTube Video -->
         <div class="video-wrapper">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/2DlMd0N2kyY?si=O2oOV1WkaDtZuxFr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/2DlMd0N2kyY?si=O2oOV1WkaDtZuxFr" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
         </div>
 
         <p class="description">
             Pengun is a project from my C# For Games Designers module, which I later continued to add more polish. I was tasked with creating a top-down 2D shooter, with little other guidance. My approach was to make an arena shooter combining the gameplay of Enter The Gungeon with the upgrade system of Downwell. My work includes the design, mechanics, art, sound effects and programming. The music was made by Ben Reber.
-
-
         </p>
     </div>
 
