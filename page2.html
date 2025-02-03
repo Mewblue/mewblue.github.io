@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 1 - Video Content</title>
+    <title>Page 2 - Video Content</title>
     <style>
         /* General Reset */
         * {
@@ -67,22 +67,121 @@
         .description {
             font-size: 1.1rem;
             line-height: 1.6;
+            margin-bottom: 20px; /* Adds spacing before links */
+        }
+
+        /* Links Section */
+        .links {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .links a {
+            display: inline-block;
+            text-decoration: none;
+            color: #4DA8DA;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .links a:hover {
+            background: rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
 <body>
 
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="page1.html">PENGUN</a>
+    <a href="page2.html">Reachpoint</a>
+    <a href="page3.html">Rogue Fantasy</a>
+    <a href="page4.html">Spellslingers</a>
+</nav>
+
+<!-- Styles for Navigation Bar -->
+<style>
+    /* Navigation Bar */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .navbar a {
+            padding: 8px 15px;
+            font-size: 1rem;
+        }
+    }
+</style>
+
+
     <div class="content-container">
         <h1>Reachpoint</h1>
 
-        <!-- Embedded YouTube Video (Autoplay & Muted to comply with browser rules) -->
+        <!-- Embedded YouTube Video -->
         <div class="video-wrapper">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/YVKEPWaTCtU?si=HrMSmxHwG8YTIcXF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/YVKEPWaTCtU?si=HrMSmxHwG8YTIcXF" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
         </div>
 
         <p class="description">
-            Reachpoint is a Team Fortress 2 King of the Hill map I created for the Multiplayer Level Design module. The development process consisted of research, designing the map, testing with fellow students and analysing feedback to inform the next iteration. The design document for this project is linked below.
+            Reachpoint is a Team Fortress 2 King of the Hill map I created for the Multiplayer Level Design module. The development process consisted of research, designing the map, testing with fellow students, and analyzing feedback to inform the next iteration.
         </p>
+
+        <!-- Links Section -->
+        <div class="links">
+            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3355258343" target="_blank">
+                View on Steam Workshop
+            </a>
+            <a href="https://staffsuniversity-my.sharepoint.com/:b:/g/personal/s012495m_student_staffs_ac_uk/EYRq3IasWZtDoor1tHBcYLUB3wUwxwK_vliKXjdRWeRdmA?e=zdiuTh" target="_blank">
+                View Design Document
+            </a>
+        </div>
+
     </div>
 
 </body>

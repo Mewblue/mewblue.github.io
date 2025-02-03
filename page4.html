@@ -72,6 +72,60 @@
 </head>
 <body>
 
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="page1.html">PENGUN</a>
+    <a href="page2.html">Reachpoint</a>
+    <a href="page3.html">Rogue Fantasy</a>
+    <a href="page4.html">Spellslingers</a>
+</nav>
+
+<!-- Styles for Navigation Bar -->
+<style>
+    /* Navigation Bar */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .navbar a {
+            padding: 8px 15px;
+            font-size: 1rem;
+        }
+    }
+</style>
+
+
     <div class="content-container">
         <h1>Spellslingers</h1>
 
@@ -83,6 +137,35 @@
         <p class="description">
             This is my final year project at Staffordshire University. The project exists as a solution to a problem created by the meteoric rise of GPS-based games in the past decade - resources and gameplay in these games often end up tied to monuments and rely heavily on physical location. As a result, many players end up being excluded due to where they live or get encouraged to drive to the ideal location. This project looks back at pedometer-based games which are more accessible and aims to remain lightweight on performance to allow for many users.
 
+<style>
+    /* Button Styling */
+    .button-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .button {
+        text-decoration: none;
+        color: white;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 2px solid white;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+</style>
+
+<!-- Button Section -->
+<div class="button-container">
+    <a href="https://staffsuniversity-my.sharepoint.com/:u:/g/personal/s012495m_student_staffs_ac_uk/EYDISw7zDH1Gs4d0VPnOyukB2FoC8v1vCLhZmX3iDj7NVg?e=0vw3d0" class="button">View Design Document</a>
+</div>
 
 
 

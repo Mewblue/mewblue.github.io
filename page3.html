@@ -72,6 +72,60 @@
 </head>
 <body>
 
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="page1.html">PENGUN</a>
+    <a href="page2.html">Reachpoint</a>
+    <a href="page3.html">Rogue Fantasy</a>
+    <a href="page4.html">Spellslingers</a>
+</nav>
+
+<!-- Styles for Navigation Bar -->
+<style>
+    /* Navigation Bar */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .navbar a {
+            padding: 8px 15px;
+            font-size: 1rem;
+        }
+    }
+</style>
+
+
     <div class="content-container">
         <h1>Rogue Fantasy</h1>
 
