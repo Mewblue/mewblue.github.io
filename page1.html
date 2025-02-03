@@ -54,14 +54,40 @@
         /* Content Container */
         .content-container {
             background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
+			margin-top: 500px; /* Adjust this based on your navbar height */
             padding: 30px;
             border-radius: 20px;
             text-align: center;
             width: 80%;
             max-width: 700px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-            margin-top: 80px; /* Prevents overlap with navbar */
         }
+		
+		@media (min-width: 768px) {
+    .content-container {
+	            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
+			margin-top: 150px; /* Adjust this based on your navbar height */
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-container {
+	            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
+			margin-top: 150px; /* Adjust this based on your navbar height */
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    }
+}
 
         /* Title Styling */
         .content-container h1 {
