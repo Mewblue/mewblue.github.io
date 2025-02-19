@@ -15,19 +15,24 @@
 
         /* Full-page background */
         body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background: url('static/background.png') repeat;
             background-size: cover;
             color: white;
+            overflow-y: auto; /* Enable scrolling */
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px; /* Space between containers */
+            padding: 50px 0; /* Add padding so content isn't flush against the edges */
         }
 
         /* Content Container */
         .content-container {
             background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
-			margin-top: 300px; /* Adjust this based on your navbar height */
             padding: 30px;
             border-radius: 20px;
             text-align: center;
@@ -35,53 +40,17 @@
             max-width: 700px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
         }
-		
-		@media (min-width: 768px) {
-    .content-container {
-	            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
-			margin-top: 30px; /* Adjust this based on your navbar height */
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    }
-}
-
-@media (min-width: 1024px) {
-    .content-container {
-	            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
-			margin-top: 30px; /* Adjust this based on your navbar height */
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    }
-}
 
         /* Title Styling */
         .content-container h1 {
             font-size: 2rem;
             margin-bottom: 20px;
         }
-		
-				/* Scrolling */
-			.scroll-box {
-            width: 300px;
-            height: 250px;
-            overflow-y: scroll;
-			overflow-x: hidden;
-            border: 1px solid #ccc;
-            padding: 10px;
-			}
-		
+
         /* Video Embed */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             max-width: 100%;
@@ -104,7 +73,7 @@
         .description {
             font-size: 1.1rem;
             line-height: 1.6;
-            margin-bottom: 20px; /* Adds spacing before links */
+            margin-bottom: 20px;
         }
 
         /* Links Section */
@@ -116,7 +85,6 @@
         }
 
         .links a {
-            display: inline-block;
             text-decoration: none;
             color: #4DA8DA;
             font-size: 1.1rem;
@@ -129,6 +97,46 @@
 
         .links a:hover {
             background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            .navbar a {
+                padding: 8px 15px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -143,50 +151,8 @@
     <a href="page4.html">Spellslingers</a>
 </nav>
 
-<!-- Styles for Navigation Bar -->
-<style>
-    /* Navigation Bar */
-    .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 15px 0;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-    }
-
-    .navbar a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.1rem;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background 0.3s ease;
-    }
-
-    .navbar a:hover {
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Responsive Navigation */
-    @media (max-width: 768px) {
-        .navbar {
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 10px;
-        }
-
-        .navbar a {
-            padding: 8px 15px;
-            font-size: 1rem;
-        }
-    }
-</style>
-
+<!-- Content Wrapper -->
+<div class="content-wrapper">
 
     <div class="content-container">
         <h1>Reachpoint</h1>
@@ -214,12 +180,43 @@
             <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3355258343" target="_blank">
                 View on Steam Workshop
             </a>
-            <a href="https://staffsuniversity-my.sharepoint.com/:b:/g/personal/s012495m_student_staffs_ac_uk/EamU0kvTglNHlGHMQQ4fKOQBOgmW0Q6V6gQO21wkKfYt9w?e=Rog12Y" target="_blank">
+            <a href="ignore this"> 
                 View Design Document
             </a>
         </div>
-
     </div>
+
+    <!-- Duplicate Content Container -->
+    <div class="content-container">
+        <h1>Pipeway Pond</h1>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-wrapper">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://youtu.be/0VIPnMFUQHU" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p class="description">
+            
+        </p>
+
+        <!-- Links Section -->
+        <div class="links">
+            <a href="https://staffsuniversity-my.sharepoint.com/:b:/g/personal/s012495m_student_staffs_ac_uk/EYiQe-G5DUxJr9LtOlTqrMQBVp7V2TBR-Gf4oQn9YkQB_w?e=qi8xf7"> 
+                View Design Document
+            </a>
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
