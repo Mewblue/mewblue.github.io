@@ -1,185 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PENGUN</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Full-page background */
-        body {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: url('static/background.png') repeat;
-            background-size: cover;
-            color: white;
-        }
-
-        /* Navigation Bar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.1rem;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .navbar a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Content Container */
-        .content-container {
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
-			margin-top: 200px; /* Adjust this based on your navbar height */
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-        }
-		
-		@media (min-width: 768px) {
-    .content-container {
-	            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
-			margin-top: 50px; /* Adjust this based on your navbar height */
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PENGUN</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
-}
 
-@media (min-width: 1024px) {
-    .content-container {
-	            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
-			margin-top: 150px; /* Adjust this based on your navbar height */
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    body {
+      min-height: 100vh;
+      background: url('static/background.png') repeat;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-}
 
-        /* Title Styling */
-        .content-container h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-		
-				/* Scrolling */
-			.scroll-box {
-            width: 300px;
-            height: 250px;
-            overflow-y: scroll;
-			overflow-x: hidden;
-            border: 1px solid #ccc;
-            padding: 10px;
-			}
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
 
-        /* Video Embed */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: black;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 10px;
-        }
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-        /* Description Text */
-        .description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
+    .content-container {
+      background: rgba(0, 0, 0, 0.7);
+      margin-top: 150px;
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 1500px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    }
 
-        /* Responsive Navigation */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 10px;
-            }
+    .content-container h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-            .navbar a {
-                padding: 8px 15px;
-                font-size: 1rem;
-            }
-        }
-    </style>
+    /* Flex layout */
+    .video-text-section {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .video-section {
+      flex: 1 1 48%;
+    }
+
+	.video-section iframe {
+	  width: 560px;
+	  height: 315px;
+	  max-width: 100%;
+	  border: none;
+	  border-radius: 10px;
+	  display: block;
+	}
+
+
+    .text-section {
+      flex: 1 1 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-section p:first-child {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .text-section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+
+      .navbar a {
+        padding: 8px 15px;
+        font-size: 1rem;
+      }
+
+      .video-text-section {
+        flex-direction: column;
+      }
+
+      .video-section,
+      .text-section {
+        flex: 1 1 100%;
+      }
+
+      .video-section iframe {
+        height: 250px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="page1.html">PENGUN</a>
-        <a href="page2.html">Reachpoint</a>
-        <a href="page3.html">Rogue Fantasy</a>
-        <a href="page4.html">Spellslingers</a>
-    </nav>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="page1.html">PENGUN</a>
+    <a href="page2.html">Reachpoint</a>
+    <a href="page3.html">Rogue Fantasy</a>
+    <a href="page4.html">Spellslingers</a>
+	<a href="aboutMe.html">About Me</a>
+  </nav>
 
-    <div class="content-container">
-        <h1>PENGUN</h1>
+  <div class="content-container">
+    <h1>PENGUN</h1>
 
-        <!-- Embedded YouTube Video -->
-        <div class="video-wrapper">
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/2DlMd0N2kyY?si=O2oOV1WkaDtZuxFr" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
-        </div>
+    <div class="video-text-section">
+      <div class="video-section">
+        <iframe 
+          src="https://www.youtube.com/embed/2DlMd0N2kyY?si=O2oOV1WkaDtZuxFr" 
+          title="YouTube video player" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
 
-        <p class="description">
-            Pengun is a project from my C# For Games Designers module, which I later continued to add more polish. I was tasked with creating a top-down 2D shooter, with little other guidance. My approach was to make an arena shooter combining the gameplay of Enter The Gungeon with the upgrade system of Downwell. My work includes the design, mechanics, art, sound effects and programming. The music was made by Ben Reber.
-        </p>
+      <div class="text-section">
+        <p></p>
+        <p>Pengun is a top-down 2D arena shooter inspired by Enter The Gungeon and Downwell. <br/>
+		This project was created in my C# For Games Designers module. I handled the design, mechanics, art, sound effects, and programming. <br/>Music by Ben Reber.</p>
+      </div>
     </div>
+  </div>
 
 </body>
 </html>
