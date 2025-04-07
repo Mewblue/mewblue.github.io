@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog</title>
+  <style>
+    body {
+      background: url('static/background.png') repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 100px 20px 50px;
+    }
+
+    .blog-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .blog-entry {
+      display: flex;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .blog-entry:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: scale(1.02);
+    }
+
+    .blog-thumbnail {
+      flex-shrink: 0;
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .blog-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .blog-description {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+      .blog-entry {
+        flex-direction: column;
+      }
+
+      .blog-thumbnail {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blog-container">
+
+    <a href="blog1.html" class="blog-entry">
+      <img src="static/blog1-thumb.jpg" alt="Blog 1 Thumbnail" class="blog-thumbnail" />
+      <div class="blog-content">
+        <div class="blog-title">Making PENGUN</div>
+        <div class="blog-description">
+          Behind the design of a bullet-hell penguin shooter. How the art, programming and gameplay came together.
+        </div>
+      </div>
+    </a>
+
+    <a href="blog2.html" class="blog-entry">
+      <img src="static/beastieballIMG.jpg" alt="Blog 2 Thumbnail" class="blog-thumbnail" />
+      <div class="blog-content">
+        <div class="blog-title">Beastieball and The Beauty of Competition</div>
+        <div class="blog-description">
+          An analysis of how Beastieball simulates real sports in a turn-based RPG format!
+        </div>
+      </div>
+    </a>
+
+    <!-- Add more blog entries here -->
+
+  </div>
+
+</body>
+</html>
