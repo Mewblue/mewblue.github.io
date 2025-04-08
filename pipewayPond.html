@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PENGUN</title>
+  <title>Pipeway Pond</title>
   <style>
     * {
       margin: 0;
@@ -93,30 +93,58 @@
       justify-content: center;
     }
 
-    .text-section p:first-child {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
     .text-section p {
       font-size: 1.05rem;
       line-height: 1.6;
     }
 
-    .links a {
+	.links {
+	  width: 100%;
 	  display: flex;
 	  justify-content: center;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ffffff22;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-    }
+	}
+
+	.links a {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	  padding: 10px 20px;
+	  background-color: #ffffff22;
+	  color: white;
+	  text-decoration: none;
+	  border-radius: 8px;
+	  transition: background 0.3s ease;
+	}
+
 
     .links a:hover {
       background-color: #ffffff44;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      animation: scroll 30s linear infinite;
+      width: max-content;
+    }
+
+    .carousel-track img {
+      height: 200px;
+      width: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     @media (max-width: 768px) {
@@ -150,12 +178,12 @@
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="page1.html">PENGUN</a>
-	<a href="pipewayPond.html">Pipeway Pond</a>
+    <a href="pipewayPond.html">Pipeway Pond</a>
     <a href="page2.html">Reachpoint</a>
     <a href="page3.html">Rogue Fantasy</a>
     <a href="page4.html">Spellslingers</a>
-	<a href="blog.html">Blog</a>
-	<a href="aboutMe.html">About Me</a>
+    <a href="blog.html">Blog</a>
+    <a href="aboutMe.html">About Me</a>
   </nav>
 
   <div class="content-container">
@@ -163,18 +191,21 @@
 
     <div class="video-text-section">
       <div class="video-section">
-	  <iframe width="560" height="315" src="https://www.youtube.com/embed/pFh5lqj1YWo?si=RDlBVoUKeFBKaCQz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pFh5lqj1YWo?si=RDlBVoUKeFBKaCQz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <div class="text-section">
-        <p>Solo Project
-        <br/>Tools Used: Mario Maker 2, Figma, Lucidchart, Aseprite
-        <br/>Project Goals: Learn Unity, expand knowledge of C#, improve pixel art skills.
-        <br/>Time span: 1 month
+		<p><b>Solo Project</b>
+        <br/><b>Tools Used:</b> Mario Maker 2, Figma, Lucidchart, Aseprite
+        <br/><b>Project Goals:</b> Create an experimental level design around a mechanical focus.
+        <br/><b>Time span:</b> 1 month
         </p>
         		This project is a level I made in Mario Maker 2. The mechanical focus of the level was to teach the player how to use the frog suit in the Super Mario Bros. 3 style, from absolute beginner to advanced tech. I did many iterations with dozens of testers to achieve the final result to ensure that the level was polished.
 		<br/>
 		<br/>
+				<br/>
+		<br/>
+				<br/>
             <b>Course ID: HNH-KN6-3LF</b>
 
         <div class="links">
@@ -184,6 +215,21 @@
         </div>
       </div>
     </div>
+
+    <!-- Carousel placed outside text section -->
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="static/MarioScreen2.jpg" alt="Screenshot 1">
+		<img src="static/MarioScreen4.jpg" alt="Screenshot 4">
+        <img src="static/BeatsAndPacing2.png" alt="Screenshot 2">
+        <img src="static/1block.png" alt="Screenshot 3">
+        <img src="static/MarioScreen2.jpg" alt="Screenshot 1">
+		<img src="static/MarioScreen4.jpg" alt="Screenshot 4">
+        <img src="static/BeatsAndPacing2.png" alt="Screenshot 2">
+        <img src="static/1block.png" alt="Screenshot 3">
+      </div>
+    </div>
+
   </div>
 
 </body>
