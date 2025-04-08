@@ -93,40 +93,59 @@
       justify-content: center;
     }
 
-    .text-section p:first-child {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
     .text-section p {
       font-size: 1.05rem;
       line-height: 1.6;
     }
 
 	.links {
-	  display: flex;
-	  flex-direction: column;
 	  width: 100%;
-	  gap: 15px;
-	  margin-top: 20px;
+	  display: flex;
+	  justify-content: center;
 	}
 
 	.links a {
-	  display: block;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
 	  width: 100%;
 	  padding: 10px 20px;
 	  background-color: #ffffff22;
 	  color: white;
-	  text-align: center;
 	  text-decoration: none;
 	  border-radius: 8px;
 	  transition: background 0.3s ease;
 	}
 
-	.links a:hover {
-	  background-color: #ffffff44;
-	}
 
+    .links a:hover {
+      background-color: #ffffff44;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      animation: scroll 30s linear infinite;
+      width: max-content;
+    }
+
+    .carousel-track img {
+      height: 200px;
+      width: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
     @media (max-width: 768px) {
       .navbar {
@@ -176,11 +195,14 @@
       </div>
 
       <div class="text-section">
-        <p>Solo Project (With large-scale collaborative QA Testing) - Design, QA
-        <br/>Tools Used: Hammer Engine, Steam, DungeonScrawl, Aseprite
-        <br/>Project Goals: Learn multiplayer level design, learn Hammer Engine, become familiar with QA testing for competitive multiplayer games.
-        <br/>Time span: 6 weeks
+        <p><b>Solo Project</b> (With large-scale collaborative QA Testing) - Design, QA
+        <br/><b>Tools Used:</b> Hammer Engine, Steam, DungeonScrawl, Aseprite
+        <br/><b>Project Goals:</b> Learn multiplayer level design, learn Hammer Engine, become familiar with QA testing for competitive multiplayer games.
+        <br/><b>Time span:</b> 6 weeks
         </p>
+		<br/>
+				<br/>
+						<br/>
         <p>            Reachpoint is a Team Fortress 2 King of the Hill map I created for the Multiplayer Level Design module. The development process consisted of research, designing the map, testing with fellow students, and analyzing feedback to inform the next iteration.</p>
 
         <div class="links">
@@ -189,6 +211,21 @@
         </div>
       </div>
     </div>
+
+    <!-- Carousel placed outside text section -->
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="static/PengunTitle.png" alt="Screenshot 1">
+		<img src="static/placeholder1.jpg" alt="Screenshot 4">
+        <img src="static/ClubPengun.png" alt="Screenshot 2">
+        <img src="static/PengunIce.png" alt="Screenshot 3">
+		<img src="static/PengunTitle.png" alt="Screenshot 1">
+		<img src="static/placeholder1.jpg" alt="Screenshot 4">
+        <img src="static/ClubPengun.png" alt="Screenshot 2">
+        <img src="static/PengunIce.png" alt="Screenshot 3">
+      </div>
+    </div>
+
   </div>
 
 </body>
