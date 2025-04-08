@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spellslingers</title>
+  <title>PENGUN</title>
   <style>
     * {
       margin: 0;
@@ -99,29 +99,53 @@
     }
 
 	.links {
-	  display: flex;
-	  flex-direction: column;
 	  width: 100%;
-	  gap: 15px;
-	  margin-top: 20px;
+	  display: flex;
+	  justify-content: center;
 	}
 
 	.links a {
-	  display: block;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
 	  width: 100%;
 	  padding: 10px 20px;
 	  background-color: #ffffff22;
 	  color: white;
-	  text-align: center;
 	  text-decoration: none;
 	  border-radius: 8px;
 	  transition: background 0.3s ease;
 	}
 
-	.links a:hover {
-	  background-color: #ffffff44;
-	}
 
+    .links a:hover {
+      background-color: #ffffff44;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      animation: scroll 30s linear infinite;
+      width: max-content;
+    }
+
+    .carousel-track img {
+      height: 200px;
+      width: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
     @media (max-width: 768px) {
       .navbar {
@@ -167,7 +191,7 @@
 
     <div class="video-text-section">
       <div class="video-section">
-        <iframe width="560" height="315" src="https://youtube.com/embed/BDsJK6xjXn4?si=VnR4k9TeNqBr218K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8SpH3Cf36u0?si=unATzZvNmK1LbZpu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <div class="text-section">
@@ -185,6 +209,25 @@
         </div>
       </div>
     </div>
+
+    <!-- Carousel placed outside text section -->
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="static/SpellslingersADR.png" alt="Screenshot 1">
+		<img src="static/SpellslingersStorage.png" alt="Screenshot 4">
+        <img src="static/SpellslingersStorageWireframe.png" alt="Screenshot 2">
+        <img src="static/placeholder4.jpg" alt="Screenshot 3">
+		<img src="static/BattleWireframe.png" alt="Screenshot 5">
+		<img src="static/SpellslingersEncounters.png" alt="Screenshot 6">
+		<img src="static/SpellslingersADR.png" alt="Screenshot 1">
+		<img src="static/SpellslingersStorage.png" alt="Screenshot 4">
+        <img src="static/SpellslingersStorageWireframe.png" alt="Screenshot 2">
+        <img src="static/placeholder4.jpg" alt="Screenshot 3">
+		<img src="static/BattleWireframe.png" alt="Screenshot 5">
+		<img src="static/SpellslingersEncounters.png" alt="Screenshot 6">
+      </div>
+    </div>
+
   </div>
 
 </body>
