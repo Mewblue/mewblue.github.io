@@ -5,23 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog</title>
   <style>
-  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
     body {
       background: url('static/background.png') repeat;
       background-size: cover;
       font-family: Arial, sans-serif;
       color: white;
-      padding: 100px 20px 50px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .blog-container {
       max-width: 1000px;
-      margin: 0 auto;
+      margin-top: 150px;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+      width: 90%;
     }
 
     .blog-entry {
       display: flex;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.6);
       border-radius: 15px;
       overflow: hidden;
       margin-bottom: 30px;
@@ -61,6 +101,16 @@
     }
 
     @media (max-width: 600px) {
+      .navbar {
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+
+      .navbar a {
+        padding: 8px 15px;
+        font-size: 1rem;
+      }
+
       .blog-entry {
         flex-direction: column;
       }
@@ -74,35 +124,25 @@
 </head>
 <body>
 
-<nav class="navbar">
+  <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="page1.html">PENGUN</a>
-	<a href="pipewayPond.html">Pipeway Pond</a>
+    <a href="pipewayPond.html">Pipeway Pond</a>
     <a href="page2.html">Reachpoint</a>
     <a href="page3.html">Rogue Fantasy</a>
     <a href="page4.html">Spellslingers</a>
-	<a href="blog.html">Blog</a>
-	<a href="aboutMe.html">About Me</a>
-</nav>
+    <a href="blog.html">Blog</a>
+    <a href="aboutMe.html">About Me</a>
+  </nav>
 
   <div class="blog-container">
-
-    <a href="blog1.html" class="blog-entry">
-      <img src="static/blog1-thumb.jpg" alt="Blog 1 Thumbnail" class="blog-thumbnail" />
-      <div class="blog-content">
-        <div class="blog-title">Making PENGUN</div>
-        <div class="blog-description">
-          Behind the design of a bullet-hell penguin shooter. How the art, programming and gameplay came together.
-        </div>
-      </div>
-    </a>
 
     <a href="blog2.html" class="blog-entry">
       <img src="static/beastieballIMG.jpg" alt="Blog 2 Thumbnail" class="blog-thumbnail" />
       <div class="blog-content">
         <div class="blog-title">Beastieball and The Beauty of Competition</div>
         <div class="blog-description">
-          An analysis of how Beastieball simulates real sports in a turn-based RPG format!
+          An analysis of how Beastieball simulates real sports in a turn-based RPG and what it taught me about the spirit of competing in esports.
         </div>
       </div>
     </a>
