@@ -1,217 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spellslingers</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Full-page background */
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: url('static/background.png') repeat;
-            background-size: cover;
-            color: white;
-        }
-
-        /* Content Container */
-        .content-container {
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
-			margin-top: 500px; /* Adjust this based on your navbar height */
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-        }
-		
-		@media (min-width: 768px) {
-    .content-container {
-	            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
-			margin-top: 50px; /* Adjust this based on your navbar height */
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
-}
 
-@media (min-width: 1024px) {
-    .content-container {
-	            background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
-			margin-top: 30px; /* Adjust this based on your navbar height */
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    body {
+      min-height: 100vh;
+      background: url('static/background.png') repeat;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-}
 
-        /* Title Styling */
-        .content-container h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-		
-		/* Scrolling */
-			.scroll-box {
-            width: 300px;
-            height: 250px;
-            overflow-y: scroll;
-			overflow-x: hidden;
-            border: 1px solid #ccc;
-            padding: 10px;
-			}
-
-        /* Video Embed */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: black;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 10px;
-        }
-
-        /* Description Text */
-        .description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
-
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="page1.html">PENGUN</a>
-	<a href="pipewayPond.html">Pipeway Pond</a>
-    <a href="page2.html">Reachpoint</a>
-    <a href="page3.html">Rogue Fantasy</a>
-    <a href="page4.html">Spellslingers</a>
-	<a href="blog.html">Blog</a>
-	<a href="aboutMe.html">About Me</a>
-</nav>
-
-<!-- Styles for Navigation Bar -->
-<style>
-    /* Navigation Bar */
     .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 15px 0;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
     }
 
     .navbar a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.1rem;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background 0.3s ease;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
     }
 
     .navbar a:hover {
-        background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.2);
     }
 
-    /* Responsive Navigation */
+    .content-container {
+      background: rgba(0, 0, 0, 0.7);
+      margin-top: 150px;
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 1500px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .content-container h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .info-section {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .image-section {
+      flex: 1 1 48%;
+    }
+
+    .image-section img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .text-section {
+      flex: 1 1 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .links a {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      background-color: #ffffff22;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: #ffffff44;
+    }
+
     @media (max-width: 768px) {
-        .navbar {
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 10px;
-        }
+      .navbar {
+        flex-wrap: wrap;
+        padding: 10px;
+      }
 
-        .navbar a {
-            padding: 8px 15px;
-            font-size: 1rem;
-        }
+      .navbar a {
+        padding: 8px 15px;
+        font-size: 1rem;
+      }
+
+      .info-section {
+        flex-direction: column;
+      }
+
+      .image-section,
+      .text-section {
+        flex: 1 1 100%;
+      }
     }
-</style>
+  </style>
+</head>
+<body>
 
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="page1.html">PENGUN</a>
+    <a href="pipewayPond.html">Pipeway Pond</a>
+    <a href="page2.html">Reachpoint</a>
+    <a href="page3.html">Rogue Fantasy</a>
+    <a href="page4.html">Spellslingers</a>
+    <a href="blog.html">Blog</a>
+    <a href="aboutMe.html">About Me</a>
+  </nav>
 
-    <div class="content-container">
-        <h1>Spellslingers</h1>
+  <div class="content-container">
+    <h1>About Me</h1>
 
-        <!-- Embedded YouTube Video (Autoplay & Muted to comply with browser rules) -->
-        <div class="video-wrapper">
-		<iframe width="560" height="315" src="https://youtube.com/embed/BDsJK6xjXn4?si=VnR4k9TeNqBr218K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="info-section">
+      <div class="image-section">
+        <img src="static/JohnFace.jpg" alt="Photo of me" />
+      </div>
+
+      <div class="text-section">
+        <p>Hey! I’m a game designer, developer, and pixel artist passionate about creating games that are both accessible and engaging. I studied Game Design at Staffordshire University and have experience with Unity, C#, Aseprite, and sound design tools like JSFXR.</p>
+
+        <p>My work often focuses on combining retro aesthetics with modern design practices. I enjoy working on solo projects as it gives me the chance to explore all aspects of development—from gameplay systems and visuals to audio and QA.</p>
+
+		<p>I also do various hobbies! In my free time I enjoy painting models, drawing, hiking, collectible card games and tennis, on top of playing games of course!</p>
+        <div class="links">
+          <a href="mailto:richardjohnstevens769@gmail.com" target="_blank">Email Me</a>
+		  <a href="mailto:mewblue769@aol.com" target="_blank">Secondary Email</a>
+		  <a href="https://www.linkedin.com/in/richard-stevens-84b563277/" target="_blank">LinkedIn</a>
+          <a href="https://bow-coach-675.notion.site/5dff1b1aabb74d75a5e51486516bfd59?v=a0a19a561607405ba69c76e7627661b7" target="_blank">Completed games backlog 2024</a>
         </div>
-
-        <p class="description">
-            This is my final year project at Staffordshire University. The project exists as a solution to a problem created by the meteoric rise of GPS-based games in the past decade - resources and gameplay in these games often end up tied to monuments and rely heavily on physical location. As a result, many players end up being excluded due to where they live or get encouraged to drive to the ideal location. This project looks back at pedometer-based games which are more accessible and aims to remain lightweight on performance to allow for many users.
-
-<style>
-    /* Button Styling */
-    .button-container {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .button {
-			display: inline-block;
-            text-decoration: none;
-            color: #4DA8DA;
-            font-size: 1.1rem;
-            font-weight: bold;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-    }
-
-    .button:hover {
-        background: rgba(255, 255, 255, 0.3);
-    }
-</style>
-
-<!-- Button Section -->
-<div class="button-container">
-    <a href="https://staffsuniversity-my.sharepoint.com/:u:/g/personal/s012495m_student_staffs_ac_uk/EYDISw7zDH1Gs4d0VPnOyukB2FoC8v1vCLhZmX3iDj7NVg?e=0vw3d0" class="button">Download Spellslingers APK</a>
-</div>
-
-
-
-        </p>
+      </div>
     </div>
+  </div>
 
 </body>
 </html>

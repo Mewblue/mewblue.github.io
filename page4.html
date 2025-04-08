@@ -103,21 +103,30 @@
       line-height: 1.6;
     }
 
-    .links a {
+	.links {
 	  display: flex;
-	  justify-content: center;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ffffff22;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-    }
+	  flex-direction: column;
+	  width: 100%;
+	  gap: 15px;
+	  margin-top: 20px;
+	}
 
-    .links a:hover {
-      background-color: #ffffff44;
-    }
+	.links a {
+	  display: block;
+	  width: 100%;
+	  padding: 10px 20px;
+	  background-color: #ffffff22;
+	  color: white;
+	  text-align: center;
+	  text-decoration: none;
+	  border-radius: 8px;
+	  transition: background 0.3s ease;
+	}
+
+	.links a:hover {
+	  background-color: #ffffff44;
+	}
+
 
     @media (max-width: 768px) {
       .navbar {
@@ -150,12 +159,12 @@
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="page1.html">PENGUN</a>
-	<a href="pipewayPond.html">Pipeway Pond</a>
+    <a href="pipewayPond.html">Pipeway Pond</a>
     <a href="page2.html">Reachpoint</a>
     <a href="page3.html">Rogue Fantasy</a>
     <a href="page4.html">Spellslingers</a>
-	<a href="blog.html">Blog</a>
-	<a href="aboutMe.html">About Me</a>
+    <a href="blog.html">Blog</a>
+    <a href="aboutMe.html">About Me</a>
   </nav>
 
   <div class="content-container">
@@ -168,16 +177,16 @@
 
       <div class="text-section">
         <p>Solo Project - Design, programming, art, QA
-        <br/>Unity, Aseprite, JSFXR
+        <br/>Tools Used: Unity, Aseprite, JSFXR
         <br/>Project Goals: Learn Unity, expand knowledge of C#, improve pixel art skills.
-        <br/>Time span: 1 month
+        <br/>Time span: 2 months
         </p>
-        <p>This is my final year project at Staffordshire University. The project exists as a solution to a problem created by the meteoric rise of GPS-based games in the past decade - resources and gameplay in these games often end up tied to monuments and rely heavily on physical location. As a result, many players end up being excluded due to where they live or get encouraged to drive to the ideal location. This project looks back at pedometer-based games which are more accessible and aims to remain lightweight on performance to allow for many users.
+        <p>This is my final year project at Staffordshire University. The project exists as a solution to a problem created by the meteoric rise of GPS-based games in the past decade - resources and gameplay in these games often end up tied to monuments and rely heavily on physical location. As a result, many players end up being excluded due to where they live or get encouraged to drive to the ideal location. This project looks back at pedometer-based games which are more accessible and aims to remain lightweight on performance to allow for many users.</p>
 
         <div class="links">
-          <a href="https://staffsuniversity-my.sharepoint.com/:u:/g/personal/s012495m_student_staffs_ac_uk/EZdih-2XTcpNmpZMQEJ82rIB8ywAAI2GWzQT_133Y2USZg?e=RAEPyM" target="_blank">
-            Download APK
-          </a>
+          <a href="your-apk-link.apk" target="_blank">Download APK</a>
+          <a href="https://github.com/your-repo" target="_blank">Artefact Development Report</a>
+          <a href="spellslingers-design-doc.pdf" target="_blank">Design Document</a>
         </div>
       </div>
     </div>
