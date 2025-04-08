@@ -103,20 +103,53 @@
       line-height: 1.6;
     }
 
-    .links a {
+	.links {
+	  width: 100%;
 	  display: flex;
 	  justify-content: center;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ffffff22;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-    }
+	}
+
+	.links a {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	  padding: 10px 20px;
+	  background-color: #ffffff22;
+	  color: white;
+	  text-decoration: none;
+	  border-radius: 8px;
+	  transition: background 0.3s ease;
+	}
+
 
     .links a:hover {
       background-color: #ffffff44;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      animation: scroll 30s linear infinite;
+      width: max-content;
+    }
+
+    .carousel-track img {
+      height: 200px;
+      width: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     @media (max-width: 768px) {
@@ -150,12 +183,12 @@
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="page1.html">PENGUN</a>
-	<a href="pipewayPond.html">Pipeway Pond</a>
+    <a href="pipewayPond.html">Pipeway Pond</a>
     <a href="page2.html">Reachpoint</a>
     <a href="page3.html">Rogue Fantasy</a>
     <a href="page4.html">Spellslingers</a>
-	<a href="blog.html">Blog</a>
-	<a href="aboutMe.html">About Me</a>
+    <a href="blog.html">Blog</a>
+    <a href="aboutMe.html">About Me</a>
   </nav>
 
   <div class="content-container">
@@ -168,20 +201,34 @@
 
       <div class="text-section">
         <p>Solo Project - Design, Programming, Art, SFX
-        <br/>Tools Used: Unity, Aseprite, JSFXR
-        <br/>Project Goals: Learn Unity, expand knowledge of C#, improve pixel art skills.
-        <br/>Time span: 1 month
+          <br/>Tools Used: Unity, Aseprite, JSFXR
+          <br/>Project Goals: Learn Unity, expand knowledge of C#, improve pixel art skills.
+          <br/>Time span: 1 month
         </p>
         <p>Pengun is a top-down 2D arena shooter inspired by Enter The Gungeon and Downwell. <br/>
-        This project was created in my C# For Games Designers module. I handled the design, mechanics, art, sound effects, and programming. <br/>Music by Ben Reber.</p>
+          This project was created in my C# For Games Designers module. I handled the design, mechanics, art, sound effects, and programming. <br/>Music by Ben Reber.
+        </p>
 
         <div class="links">
-          <a href="https://staffsuniversity-my.sharepoint.com/:u:/g/personal/s012495m_student_staffs_ac_uk/EZdih-2XTcpNmpZMQEJ82rIB8ywAAI2GWzQT_133Y2USZg?e=RAEPyM" target="_blank">
-            Download Windows Build
-          </a>
+          <a href="https://staffsuniversity-my.sharepoint.com/:u:/g/personal/s012495m_student_staffs_ac_uk/EZdih-2XTcpNmpZMQEJ82rIB8ywAAI2GWzQT_133Y2USZg?e=RAEPyM" target="_blank">Download Windows Build</a>
         </div>
       </div>
     </div>
+
+    <!-- Carousel placed outside text section -->
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="static/PengunTitle.png" alt="Screenshot 1">
+		<img src="static/placeholder1.jpg" alt="Screenshot 4">
+        <img src="static/ClubPengun.png" alt="Screenshot 2">
+        <img src="static/PengunIce.png" alt="Screenshot 3">
+		<img src="static/PengunTitle.png" alt="Screenshot 1">
+		<img src="static/placeholder1.jpg" alt="Screenshot 4">
+        <img src="static/ClubPengun.png" alt="Screenshot 2">
+        <img src="static/PengunIce.png" alt="Screenshot 3">
+      </div>
+    </div>
+
   </div>
 
 </body>
