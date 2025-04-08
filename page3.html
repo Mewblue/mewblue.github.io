@@ -64,7 +64,6 @@
       text-align: center;
     }
 
-    /* Flex layout */
     .video-text-section {
       display: flex;
       flex-direction: row;
@@ -78,15 +77,14 @@
       flex: 1 1 48%;
     }
 
-	.video-section iframe {
-	  width: 560px;
-	  height: 315px;
-	  max-width: 100%;
-	  border: none;
-	  border-radius: 10px;
-	  display: block;
-	}
-
+    .video-section iframe {
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+      border: none;
+      border-radius: 10px;
+      display: block;
+    }
 
     .text-section {
       flex: 1 1 48%;
@@ -103,6 +101,35 @@
     .text-section p {
       font-size: 1.05rem;
       line-height: 1.6;
+    }
+
+    /* Image Carousel */
+    .carousel-wrapper {
+      overflow: hidden;
+      margin-top: 40px;
+      border-radius: 12px;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: fit-content;
+      animation: scroll 30s linear infinite;
+    }
+
+    .carousel-track img {
+      height: 200px;
+      margin-right: 20px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     @media (max-width: 768px) {
@@ -128,6 +155,11 @@
       .video-section iframe {
         height: 250px;
       }
+
+      .carousel-track img {
+        height: 150px;
+        margin-right: 10px;
+      }
     }
   </style>
 </head>
@@ -136,12 +168,12 @@
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="page1.html">PENGUN</a>
-	<a href="pipewayPond.html">Pipeway Pond</a>
+    <a href="pipewayPond.html">Pipeway Pond</a>
     <a href="page2.html">Reachpoint</a>
     <a href="page3.html">Rogue Fantasy</a>
     <a href="page4.html">Spellslingers</a>
-	<a href="blog.html">Blog</a>
-	<a href="aboutMe.html">About Me</a>
+    <a href="blog.html">Blog</a>
+    <a href="aboutMe.html">About Me</a>
   </nav>
 
   <div class="content-container">
@@ -159,15 +191,32 @@
 
       <div class="text-section">
         <p>Team Project
-		<br/>Tools Used: Unity, Aseprite, PixelFX
-		<br/>Project Goals: Create a roguelike RPG drawing from Final Fantasy I in the NES style, learn a no-outline pixelart style to master sprite readability, make a project from scratch.
-		<br/>Time span: 2 months
-		</p>
+        <br/>Tools Used: Unity, Aseprite, PixelFX
+        <br/>Project Goals: Create a roguelike RPG drawing from Final Fantasy I in the NES style, learn a no-outline pixelart style to master sprite readability, make a project from scratch.
+        <br/>Time span: 2 months
+        </p>
         <p>This is a personal project I am currently working on in spare time. It is a roguelike turn-based RPG inspired by the likes of the earliest NES Final Fantasy games.
-I worked with sound designer Morgan Smith to produce the sound effects for the game. I managed the priority of each of his tasks to help meet deadlines for his own work and provided feedback so we could achieve the best results possible.
-I designed the systems and did all of the programming for the game, as well as most of the art assets - this includes the custom font. <br/>The assets I did not make are the mushroom enemy (by raystrashcan on Instagram), campfire and audio.
+        I worked with sound designer Morgan Smith to produce the sound effects for the game. I managed the priority of each of his tasks to help meet deadlines for his own work and provided feedback so we could achieve the best results possible.
+        I designed the systems and did all of the programming for the game, as well as most of the art assets - this includes the custom font. <br/>The assets I did not make are the mushroom enemy (by raystrashcan on Instagram), campfire and audio.
+        </p>
       </div>
     </div>
+
+    <!-- Image Carousel -->
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        <img src="static/placeholder1.jpg" alt="Screenshot 1">
+        <img src="static/placeholder2.jpg" alt="Screenshot 2">
+        <img src="static/placeholder3.jpg" alt="Screenshot 3">
+        <img src="static/placeholder4.jpg" alt="Screenshot 4">
+        <!-- Repeat for smooth looping -->
+        <img src="static/placeholder1.jpg" alt="Screenshot 1">
+        <img src="static/placeholder2.jpg" alt="Screenshot 2">
+        <img src="static/placeholder3.jpg" alt="Screenshot 3">
+        <img src="static/placeholder4.jpg" alt="Screenshot 4">
+      </div>
+    </div>
+
   </div>
 
 </body>
