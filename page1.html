@@ -22,18 +22,19 @@
       align-items: center;
     }
 
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 15px 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-    }
+	.navbar {
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	  background: rgba(0, 0, 0, 0.8);
+	  padding: 15px 40px;
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+	  z-index: 1000;
+	}
+
 
     .navbar a {
       text-decoration: none;
@@ -175,16 +176,22 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="page1.html">PENGUN</a>
-    <a href="pipewayPond.html">Pipeway Pond</a>
-    <a href="page2.html">Reachpoint</a>
-    <a href="page3.html">Rogue Fantasy</a>
-    <a href="page4.html">Spellslingers</a>
-    <a href="blog.html">Blog</a>
-    <a href="aboutMe.html">About Me</a>
-  </nav>
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html">Home</a>
+    </div>
+    <div class="nav-center">
+        <a href="page1.html">PENGUN</a>
+        <a href="pipewayPond.html">Pipeway Pond</a>
+        <a href="page2.html">Reachpoint</a>
+        <a href="page3.html">Rogue Fantasy</a>
+        <a href="page4.html">Spellslingers</a>
+    </div>
+    <div class="nav-right">
+        <a href="blog.html">Blog</a>
+        <a href="aboutMe.html">About Me</a>
+    </div>
+</nav>
 
   <div class="content-container">
     <h1>PENGUN</h1>

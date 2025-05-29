@@ -111,58 +111,82 @@
 
 <!-- Navigation Bar -->
 <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="page1.html">PENGUN</a>
-	<a href="pipewayPond.html">Pipeway Pond</a>
-    <a href="page2.html">Reachpoint</a>
-    <a href="page3.html">Rogue Fantasy</a>
-    <a href="page4.html">Spellslingers</a>
-	<a href="blog.html">Blog</a>
-	<a href="aboutMe.html">About Me</a>
+    <div class="nav-left">
+        <a href="index.html">Home</a>
+    </div>
+    <div class="nav-center">
+        <a href="page1.html">PENGUN</a>
+        <a href="pipewayPond.html">Pipeway Pond</a>
+        <a href="page2.html">Reachpoint</a>
+        <a href="page3.html">Rogue Fantasy</a>
+        <a href="page4.html">Spellslingers</a>
+    </div>
+    <div class="nav-right">
+        <a href="blog.html">Blog</a>
+        <a href="aboutMe.html">About Me</a>
+    </div>
 </nav>
+
 
 <!-- Styles for Navigation Bar -->
 <style>
     /* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
     .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 15px 0;
-        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-left,
+    .nav-center,
+    .nav-right {
         justify-content: center;
-        gap: 20px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
+        flex-wrap: wrap;
+        margin: 5px 0;
     }
 
     .navbar a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.1rem;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background 0.3s ease;
+        padding: 8px 15px;
+        font-size: 1rem;
     }
+}
 
-    .navbar a:hover {
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Responsive Navigation */
-    @media (max-width: 768px) {
-        .navbar {
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 10px;
-        }
-
-        .navbar a {
-            padding: 8px 15px;
-            font-size: 1rem;
-        }
-    }
 </style>
 
 
