@@ -128,34 +128,74 @@
       }
     }
 
-    @media (max-width: 768px) {
-      .navbar {
-        flex-wrap: wrap;
-        padding: 10px;
-      }
+/* Base styles unchanged... */
 
-      .navbar a {
-        padding: 8px 15px;
-        font-size: 1rem;
-      }
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
 
-      .video-text-section {
-        flex-direction: column;
-      }
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px 0;
+  }
 
-      .video-section,
-      .text-section {
-        flex: 1 1 100%;
-      }
+  .navbar a {
+    padding: 6px 12px;
+    font-size: 0.95rem;
+  }
 
-      .video-section iframe {
-        height: 250px;
-      }
+  .video-text-section {
+    flex-direction: column;
+  }
 
-      .carousel-track img {
-        height: 150px;
-        margin-right: 10px;
-      }
+  .video-section,
+  .text-section {
+    flex: 1 1 100%;
+  }
+
+  .video-section iframe {
+    height: 220px;
+    width: 100%;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .links a {
+    width: auto;
+    padding: 10px 20px;
+  }
+
+  .content-container {
+    margin-top: 120px;
+    padding: 20px;
+  }
+
+  .carousel-container {
+    padding: 10px 0;
+  }
+
+  .carousel-track img {
+    height: 150px;
+  }
+
+  .text-section p {
+    margin-bottom: 20px;
+  }
+}
+
     }
   </style>
 </head>
